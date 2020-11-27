@@ -1,0 +1,59 @@
+
+    //Generar una solución que permita ingresar jugadores de fútbol; por cada jugador se debe solicitar:
+       // Nombre el jugador
+        //Posición en el campo de juego
+        //Edad
+        //Estatura
+
+//El ciclo de ingreso de información deberá terminar cuando el usuario lo decida. Se debe imprimer el siguiente reporte (usar una cadena de acumulación):
+
+    //Listado de Jugadores
+
+   // Alexander Dominguez -Arquero-, edad 32, estatura 1.95
+   // Xavier Arreaga -Defensa-, edad 24, estatura 1.85
+   //Moisés Caicedo -Mediocentro-, edad 19, estatura 1.88
+   //Ángel Mena -Delantero-, edad 32, estatura 1.75
+    //Michael Estrada -Delantero-, edad 27, estatura 1.93 
+    //Promedio de edades: 26.8 Promedio de estaturas: 1.87
+
+1.Inicio
+//variables
+2.nombre,x(200)[{1-9},{a-z},{A-Z},{BS}]
+3.cadenaf,x(200)[{1-9},{a-z},{A-Z},{BS}]
+4.posicion,x(200)[{1-9},{a-z},{A-Z},{BS}]
+5.edad, i[0,n]
+6.estatura, d[0,n]
+7.bandera,, i[0,n] <-- true
+8.x, d[0,n]
+9.contador, i[0,n] <--1
+10.sumaEd, i[0,n] <--0
+11.sumaS, d[0,n] <--0
+12.PromedioEd, i[0,n]
+13.promedioEs, i[0,n]
+//proceso
+14.  Haga_hasta
+15.Escribir "Ingrese el nombre del jugador"
+16.Leer nombre
+17.Escribir "Ingrese la posicion de campo de juego"
+18.Leer posicion
+19.Escribir "Ingrese la edad del jugador"
+20.Leer edad
+21.Escribir "Ingrese la estatura del jugador"
+22.Leer estatura
+23.sumaEd <-- sumaEd + edad 
+24.sumaS  <-- sumaS + estatura
+25. cadenaF = cadenaF + nombre + posicion + "edad"+ edad+"Estatura"+estatura
+26.contador <-- contador + 1
+27.Escribir "Ingresar -1 para salir del ciclo"
+28.Leer x
+29. si (x = -1) entonces
+30. bandera <-- false
+31. Fin si
+32.   fin Haga_Hasta (bandera == false)
+33. promedioEd = sumaEd / contador
+34. promedioEs = sumaS / contador
+35. cadenaF = cadenaF + "Promedio de edades:"+ promedioED + "Promedio de estaturas:"+ promedioEs
+36.Escribir cadenaF
+37. Fin
+ 
+ 
